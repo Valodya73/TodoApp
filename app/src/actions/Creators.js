@@ -23,3 +23,11 @@ export const removeItem = ((item)=>{
       element: item
     }
   });
+
+export const addTranslatedWord = ((word,enWord)=>{
+  return {
+    type: types.ADD_TRANSLATED_WORD,
+    enWord: enWord,
+    element: word
+  }
+});

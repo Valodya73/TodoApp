@@ -39,6 +39,20 @@ const Todos = (state = initialState, action) => {
         list: array,
       });
 
+    case 'ADD_TRANSLATED_WORD':
+      console.log(action);
+      var newList = state.list.slice();
+      console.log(newList);
+      newList.map((item) => {
+        if(item.title === action.enWord) {
+          item.translatedWord = action.element;
+          console.log('end', item);
+        }
+      });
+      return Object.assign({}, state, {
+        list: newList,
+      });
+
     default:
       return state;
   }

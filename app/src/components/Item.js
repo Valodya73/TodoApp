@@ -1,11 +1,15 @@
-import React, {Component} from 'react';
+import React, {Component,PropTypes} from 'react';
 import './../style/App.css';
 class Item extends Component {
   constructor(props) {
+
     super(props);
+    console.log('>>>>>> 3');
   };
 
+
   render() {
+    console.log('from TODOCONMPONENT',this.props)
     return (
       <li>
         <span className="checkbox">
@@ -17,6 +21,7 @@ class Item extends Component {
         </span>
         <span className="text">
           {this.props.item.title}
+          <span> -  <i>{this.props.item.translatedWord ? this.props.item.translatedWord : ''} </i></span>
           </span>
         <span className="remove"
               onClick={() => {
@@ -28,6 +33,13 @@ class Item extends Component {
   }
 }
 
+Item.propTypes = {
+  item: PropTypes.oneOfType([
+    PropTypes.object
+  ]),
+  crossClick : PropTypes.func,
+  isComplite : PropTypes.func,
+};
 
 export default Item;
 

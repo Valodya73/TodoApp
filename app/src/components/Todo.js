@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Item from './Item';
+import Item from './../containers/Item';
 import * as Action from './../actions/Creators'
 import './../style/App.css';
 let ID = 0;
@@ -58,8 +58,8 @@ class Todo extends Component {
         </div>
         <div className="repeat-components ">
           <ul>
-            {this.state.list.map((item) => {
-              return <Item item={item}
+            {this.state.list.map((item,index) => {
+              return <Item key={index} item={item}
                            crossClick={(item) => {
                              this.removeItem(item);
                            }}
