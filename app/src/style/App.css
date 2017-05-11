@@ -1,0 +1,64 @@
+.container {
+    width : 960px;
+    margin: 10px auto;
+    border: 1px solid gray;
+    height: 700px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 16px 16px 16px 60px;
+    border: none;
+    background: rgba(0, 0, 0, 0.003);
+    box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+    width: 500px;
+    display: inline-block;
+    margin: 10px auto;
+}
+
+.info {
+    width : 500px;
+    height: 40px;
+    margin: 0 auto;
+    border: 1px solid gray;
+}
+
+.repeat-components {
+
+}
+
+.checkbox{
+    float: left;
+}
+
+.remove{
+    float: right;
+}
+
+.text {
+    float: left;
+    margin-left: 100px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+li {
+    /*width: 100%;*/
+    border: 1px solid gray;
+    display: inline-block;
+    margin: 15px auto;
+    width: 500px;
+    height: 45px;
+    box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    padding: 12px 15px 10px 14px;
+}
+
+.count-text {
+    padding-right:15px;
+}
