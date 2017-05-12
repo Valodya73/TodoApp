@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Item from './Item';
+import Item from './../containers/Item';
 import * as Action from './../actions/Creators'
 import './../style/App.css';
 let ID = 0;

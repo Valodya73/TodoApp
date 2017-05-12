@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+
+import React, {Component,PropTypes} from 'react';
 import './../style/App.css';
 class Item extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class Item extends Component {
         </span>
         <span className="text">
           {this.props.item.title}
+          - <i> {this.props.item.translatedWord || ''}</i>
           </span>
         <span className="remove"
               onClick={() => {
@@ -28,6 +30,13 @@ class Item extends Component {
   }
 }
 
+Item.propTypes = {
+  item: PropTypes.oneOfType([
+    PropTypes.object
+  ]),
+  crossClick : PropTypes.func,
+  isComplite : PropTypes.func,
+};
 
 export default Item;
 
