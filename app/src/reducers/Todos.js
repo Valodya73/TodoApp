@@ -5,7 +5,6 @@ const Todos = (state = initialState, action) => {
   switch (action.type) {
     case types.ADD_TODO:
       var newList = state.list.slice();
-
       newList.push({
         title: action.title,
         isCompleted: false,
@@ -26,7 +25,6 @@ const Todos = (state = initialState, action) => {
       return Object.assign({}, state, {
         list: newList
       });
-
     case 'COMPLETE_TODO':
       const array = state.list;
       array.forEach((i) => {
@@ -38,7 +36,6 @@ const Todos = (state = initialState, action) => {
       return Object.assign({}, state, {
         list: array,
       });
-
     case 'RECEIVE_TRANSLATED_WORD':
       var newList = state.list.slice();
       console.log(newList);
@@ -50,7 +47,6 @@ const Todos = (state = initialState, action) => {
       return Object.assign({}, state, {
         list: newList,
       });
-
     default:
       return state;
   }

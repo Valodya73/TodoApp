@@ -42,7 +42,7 @@ export function requestTranslatedWord(item) {
           dispatch(receiveTranslatedWord(result[0],item))
         })
         .catch((err) =>{
-          dispatch(receiveTranslatedWord('N/A',item));
+          dispatch(receiveTranslatedWord('Not a found',item));
         })
   };
 }
